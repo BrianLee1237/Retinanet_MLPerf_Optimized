@@ -42,13 +42,13 @@ class OpenImages(dataset.Dataset):
         self.use_label_map = use_label_map
 
         if not cache_dir:
-            cache_dir = os.getcwd()
+            cache_dir = "/expanse/lustre/projects/ddp324/blee24/preprocessed_data"
         if pre_process:
             if preprocessed_dir:
                 self.cache_dir = preprocessed_dir
             else:
                 self.cache_dir = os.path.join(
-                    cache_dir, "preprocessed", name, image_format
+                    cache_dir, name, image_format
                 )
         else:
             self.cache_dir = cache_dir

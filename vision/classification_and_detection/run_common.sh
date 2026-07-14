@@ -112,7 +112,7 @@ if [ "$name" == "ssd-resnet34-pytorch" ]; then
 	profile=ssd-resnet34-pytorch
 fi
 if [ "$name" == "retinanet-pytorch" ]; then
-	model_path="$MODEL_DIR/resnext50_32x4d_fpn.pth"
+	model_path="$MODEL_DIR/resnext50_32x4d_fpn_no_nms.pth"
 	profile=retinanet-pytorch
 fi
 
