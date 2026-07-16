@@ -83,7 +83,6 @@ class BackendPytorchNative(backend.Backend):
         from model.image_list import ImageList
         key = [key for key in feed.keys()][0]
         batch = torch.from_numpy(feed[key]).float().to(self.device)
-        print("BATCH SHAPE:", feed[list(feed.keys())[0]].shape)
         batch = (batch - self.mean) / self.std
         n = batch.shape[0]
         images_list = ImageList(batch, [(800, 800)] * n)
